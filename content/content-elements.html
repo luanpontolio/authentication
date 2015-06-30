@@ -1,0 +1,38 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-ripple/paper-ripple.html">
+<link rel="import" href="content-card.html">
+
+<dom-module id="content-elements">
+
+  <template>
+    <style>
+      :host {
+        display: block;
+        width: 50%;
+      }
+      content-card {
+        margin-bottom: 30px;
+      }
+    </style>
+    <div layout vertical center>
+      <template>
+        <content-card>
+          <h2>LogIn</h2>
+          <paper-input error-message="Invalid input!" label="e-mail"></paper-input>
+          <br>
+          <paper-input error-message="Invalid input!" label="password"></paper-input>
+          <div class="icon-button">
+			      <iron-icon icon="more-vert"></iron-icon>
+			      <paper-ripple class="circle" recenters></paper-ripple>
+			    </div>
+          <p><a href="#">I forgot my password!</a></p>
+        </content-card>
+      </template>
+    </div>
+  </template>
+  <script>
+    Polymer({is: 'content-elements'});
+  </script>
+</dom-module>
