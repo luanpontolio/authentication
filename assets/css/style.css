@@ -13,7 +13,7 @@ paper-header-panel {
   color: white;
 }
 .paper-header.tall {
-  height: 50%;
+  height: 100%;
 }
 .paper-header.tall.image-decorete {
   background: #52ADDF url("../images/clouds-blue.png") bottom center no-repeat;
@@ -34,8 +34,3 @@ h2 {
 /* TODO: replace these with background: linear-gradient(white, var(...))
  when custom properties allow it */
 
-@media (min-width: 481px) {
-  .cover {
-    width: 400px;
-  }
-}

@@ -5,32 +5,35 @@
 <link rel="import" href="content-card.html">
 
 <dom-module id="content-elements">
-
+  <style>
+    :host {
+      display: block;
+      width: 50%;
+    }
+    .form-control paper-input {
+      padding: 10px;
+    }
+    small {
+      text-align: center;
+      color: gray;
+      font-size: 12px;
+      font-weight: 200;
+    }
+  </style>
   <template>
-    <style>
-      :host {
-        display: block;
-        width: 50%;
-      }
-      content-card {
-        margin-bottom: 30px;
-      }
-    </style>
-    <div layout vertical center>
-      <template>
-        <content-card>
-          <h2>LogIn</h2>
-          <paper-input error-message="Invalid input!" label="e-mail"></paper-input>
-          <br>
-          <paper-input error-message="Invalid input!" label="password"></paper-input>
-          <div class="icon-button">
-			      <iron-icon icon="more-vert"></iron-icon>
-			      <paper-ripple class="circle" recenters></paper-ripple>
-			    </div>
-          <p><a href="#">I forgot my password!</a></p>
-        </content-card>
-      </template>
-    </div>
+    <content-card>
+      <h2>LogIn</h2>
+      <div class="form-control">
+        <paper-input error-message="Invalid input!" label="e-mail"></paper-input>
+        <paper-input error-message="Invalid input!" label="password"></paper-input>
+      </div>
+      <div class="icon-button">
+	      <iron-icon icon="more-vert"></iron-icon>
+	    </div>
+      <small>
+        <a href="#"></a>
+      </small>
+    </content-card>
   </template>
   <script>
     Polymer({is: 'content-elements'});
